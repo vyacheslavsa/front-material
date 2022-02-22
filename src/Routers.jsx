@@ -1,12 +1,17 @@
 import * as React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import Main from "./components/Main"
+import { Routes, Route, Navigate } from "react-router-dom";
+import Cart from "./pages/Cart/Cart";
+import Favorites from "./pages/favorites/Favorites";
+import Home from "./pages/Home/Home"
 
 const Routers = () => {
-  return(
-      <Routes>
-        <Route path="/" element={<Main />} />
-      </Routes>
+  return (
+    <Routes>
+      <Route path="/home" element={<Home />} />
+      <Route path="/favorites" element={<Favorites />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/" element={<Navigate to="/home" />} />{/*redirect to home*/}
+    </Routes>
   )
 }
 
