@@ -1,9 +1,11 @@
 import React from 'react'
+import Header from "../../components/Header/Header";
 
 const Favorites = () => {
   return(
     <div>
-      Favorites
+        <Header/>
+        Favorites
     </div>
   )
 }
