@@ -1,4 +1,4 @@
-export const CarInfo = [
+const CarInfo = [
     {
         url:'https://www.avtovzglyad.ru/media/article/2021/04/19/VAZ_2101.jpg.740x555_q85_box-28%2C0%2C1132%2C828_crop_detail_upscale.jpg',
         name: '«Жигули» ВАЗ-2101'
@@ -36,6 +36,10 @@ export const CarInfo = [
         name: 'ВАЗ-2109'
     },
     {
+        url: 'https://kolesa-uploads.ru/-/20a5deff-dbac-410d-9c0f-69925d301a88/samara0.jpg',
+        name: 'ВАЗ-21099'
+    },
+    {
         url:'https://auto.ironhorse.ru/wp-content/uploads/2009/02/2110.jpg',
         name: 'ВАЗ-2110'
     },
@@ -60,3 +64,22 @@ export const CarInfo = [
         name: 'ВАЗ-2115'
     }
 ];
+
+const pagesCalculation = (array) => {
+    let count = 0
+    let countnum = 1
+    for (let i = 0; i < array.length; i++) {
+        array[i].numberPage = countnum
+        count++
+        if(count === 9){
+            count = 0
+            countnum++
+        }
+    }
+    return {
+        'number_pages':countnum,
+        'info': array
+    }
+}
+
+export const carInfoCalculate = pagesCalculation(CarInfo)
