@@ -17,7 +17,7 @@ export default function ActionAreaCard({ info }) {
                     image={info.url || noImage}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h9" component="div">
+                    <Typography gutterBottom variant="h7" component="div">
                         {info.name}
                     </Typography>
                 </CardContent>
