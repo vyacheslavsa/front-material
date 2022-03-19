@@ -10,8 +10,6 @@ function Home() {
     const [currentPage,setCurrentPage] = useState(1)
     const [openModal,setOpenModal] = useState(false)
 
-
-
     const Calculate = useMemo(()=>carInfoCalculate(CarInfo),[])//расчитываем для каждого элемента номер страницы на которой он будет находиться
     const handleChange = (event, value) => setCurrentPage(value);//функция которая меняет страницу
 
@@ -25,10 +23,10 @@ function Home() {
 
     return (
         <div>
-          <Header/>
-          <Container CarInfo={Calculate} currentPage={currentPage} openModal={()=>{setOpenModal(true)}}/>
-          <PaginationOutlined CarInfo={Calculate} handleChange={handleChange} currentPage={currentPage}/>
-          <CustomizedDialogs openModal={openModal} closeModal={()=>{setOpenModal(false)}}/>
+          <Header/> {/* Шапка */}
+          <Container CarInfo={Calculate} currentPage={currentPage} openModal={()=>{setOpenModal(true)}}/> {/* Сонтейнер с карточками */}
+          <PaginationOutlined CarInfo={Calculate} handleChange={handleChange} currentPage={currentPage}/> {/* Пагинация */}
+          <CustomizedDialogs openModal={openModal} closeModal={()=>{setOpenModal(false)}}/> {/* Модалка */}
         </div>
     );
 }

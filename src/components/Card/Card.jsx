@@ -9,7 +9,7 @@ import {noImage} from "../../constans/constans";
 export default function ActionAreaCard({info}) {
 
     return (
-        <Card >
+        <Card>
             <CardActionArea>
                 <CardMedia
                     component="img"

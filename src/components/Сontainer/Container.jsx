@@ -4,14 +4,18 @@ import style from "./Container.module.scss"
 
 function Container({CarInfo,currentPage,openModal}) {
 
-    console.log(CarInfo)
-
+    const getParameters = (value) => {
+        openModal()
+        console.log(value)
+    }
 
     return (
         <div className={style.container}>
-            {CarInfo.info.map((item,i) => currentPage === item.numberPage && <Card info={item} key={`key-${i}`}  />
+            {CarInfo.info.map((item,i) => currentPage === item.numberPage &&
+                <div onClick={()=>getParameters(item)} key={`key-${i}`}>
+                    <Card info={item}/>
+                </div>
             )}
-            <button onClick={openModal}>click</button>
         </div>
 
     );
