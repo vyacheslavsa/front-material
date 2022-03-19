@@ -1,11 +1,38 @@
 .container {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3vw;
   margin: 3%;
 
   img {
-    height: 15vw;
+    height: 12vw;
+    padding: 10px;
   }
+
+  @media (max-width: 1000px) {
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3vw;
+    margin: 3%;
+
+    img {
+      height: 30vw;
+    }
+  }
+
+  @media (max-width: 500px) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 3vw;
+    margin: 3%;
+
+    img {
+      height: 55vw;
+    }
+  }
+
 }
+

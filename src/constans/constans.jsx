@@ -1,4 +1,6 @@
-const CarInfo = [
+export const Element_Pages = 12
+
+export const CarInfo = [
     {
         url:'https://www.avtovzglyad.ru/media/article/2021/04/19/VAZ_2101.jpg.740x555_q85_box-28%2C0%2C1132%2C828_crop_detail_upscale.jpg',
         name: '«Жигули» ВАЗ-2101'
@@ -65,13 +67,13 @@ const CarInfo = [
     }
 ];
 
-const pagesCalculation = (array) => {
+export const carInfoCalculate = (array) => {
     let count = 0
     let countnum = 1
     for (let i = 0; i < array.length; i++) {
         array[i].numberPage = countnum
         count++
-        if(count === 9){
+        if(count === Element_Pages){
             count = 0
             countnum++
         }
@@ -82,4 +84,3 @@ const pagesCalculation = (array) => {
     }
 }
 
-export const carInfoCalculate = pagesCalculation(CarInfo)
