@@ -4,11 +4,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import style from "./Card.module.scss"
+import {noImage} from "../../constans/constans";
 
 export default function ActionAreaCard({info}) {
-
-
 
     return (
         <Card >
@@ -16,9 +14,7 @@ export default function ActionAreaCard({info}) {
                 <CardMedia
                     component="img"
                     height="345"
-                    image={info.url}
-                    alt="no image"
-                    className={style.test}
+                    image={info.url || noImage}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h6" component="div">
