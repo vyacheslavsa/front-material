@@ -48,17 +48,17 @@ BootstrapDialogTitle.propTypes = {
     onClose: PropTypes.func.isRequired,
 };
 
-export default function CustomizedDialogs({openModal,closeModal}) {
+export default function CustomizedDialogs({ openModal, closeModal, currentAuto }) {
 
     return (
-        <div>
+        <>
             <BootstrapDialog
                 onClose={closeModal}
                 aria-labelledby="customized-dialog-title"
                 open={openModal}
             >
                 <BootstrapDialogTitle id="customized-dialog-title" onClose={closeModal}>
-                    Modal title
+                    {currentAuto.name}
                 </BootstrapDialogTitle>
                 <DialogContent dividers>
                     <Typography gutterBottom>
@@ -82,6 +82,6 @@ export default function CustomizedDialogs({openModal,closeModal}) {
                     </Button>
                 </DialogActions>
             </BootstrapDialog>
-        </div>
+        </>
     );
 }

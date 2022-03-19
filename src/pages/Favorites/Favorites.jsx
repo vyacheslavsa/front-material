@@ -2,10 +2,10 @@ import React from 'react'
 import Header from "../../components/Header/Header";
 
 const Favorites = () => {
-  return(
+  return (
     <div>
-        <Header/>
-        Favorites
+      <Header />
+      Favorites
     </div>
   )
 }
