@@ -58,6 +58,7 @@ export default function CustomizedDialogs({ openModal, closeModal, currentAuto }
                 <BootstrapDialogTitle id="customized-dialog-title" onClose={closeModal}>
                     {currentAuto.name}
                 </BootstrapDialogTitle>
+                <img src={currentAuto.url} alt="" />
                 <DialogContent dividers>
                     <Typography gutterBottom>
                         {currentAuto.title}
